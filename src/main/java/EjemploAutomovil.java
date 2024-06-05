@@ -8,6 +8,8 @@ public class EjemploAutomovil {
         // automovil.fabricante = "Honda";
         automovil.setFabricante("Honda");
 
+        Automovil.setColorPatente("Gris");
+
         //System.out.println("automovil = " + automovil.fabricante); // Por ahora accediendo a los atributos de forma pública
         //System.out.println("automovil = " + automovil.color);
         //System.out.println("automovil = " + automovil.cilindrada);

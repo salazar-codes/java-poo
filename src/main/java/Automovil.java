@@ -5,6 +5,8 @@ public class Automovil {
     private double cilindrada;
     private int capacidadTanque = 40;
 
+    private static String colorPatente = "rojo";
+
     public Automovil() {
     }
 
@@ -70,6 +72,14 @@ public class Automovil {
         this.capacidadTanque = capacidadTanque;
     }
 
+    public static String getColorPatente() {
+        return colorPatente;
+    }
+
+    public static void setColorPatente(String colorPatente) {
+        Automovil.colorPatente = colorPatente;
+    }
+
     public void detalle(){
         // this: para hacer referencia de la misma clase. También se puede omitir, pero no siempre. Mejor ponerlo.
         // por ejemplo si tengo una variable dentro -> Stirng modelo = "";
@@ -102,6 +112,15 @@ public class Automovil {
 
     @Override // Estamos sobreescribiendo un método de la clase padre
     public boolean equals(Object obj) {
+
+        if(this == obj){
+            return true;
+        }
+
+        if(!(obj instanceof Object)){
+            return false;
+        }
+
         Automovil a = (Automovil) obj;
         return (this.fabricante.equals(a.getFabricante()) && this.modelo.equals(a.getModelo()));
     }
